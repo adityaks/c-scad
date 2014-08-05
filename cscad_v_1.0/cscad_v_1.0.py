@@ -194,11 +194,10 @@ def get_user_list(target_domain):
     target_path_two = target_domain + path_two
     print "%s" %dump_http_raw_content(target_path_two)
     print "[+] cleaned XML data results in following users !"
-    for user in re.findall(r'<Value>(.*?)</Value>',dump_http_raw_content(target_path_one)):
-        print "[U] %s" %user
-
     for user in re.findall(r'<Value>(.*?)</Value>',dump_http_raw_content(target_path_two)):
         print "[U] %s" %user
+
+    print "[*] Remove the 'User.' suffix from the above strings to extract user_names !"
     return
 
 # check the presence of crystal reports
