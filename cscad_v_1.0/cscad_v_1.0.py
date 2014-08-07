@@ -29,7 +29,7 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 '''                                              
 
 # API key used for accessing Shodan
-SHODAN_API_KEY = "IYbvYxdkAlQCMNqaOirU7JYU9hsQVHlm"
+SHODAN_API_KEY = <YOUR KEY>
 
 
 # importing required libraries for successful execution of this tool
@@ -654,7 +654,7 @@ def main():
         pass
    
     except (httplib.InvalidURL , socket.gaierror):
-        print "[-] invalid url encountered, please specify either domain or IP address only !"
+        print "[-] invalid IP Address or Domain  encountered, please specify either domain or IP address only without http or https !"
         sys.exit(0)
 
     except urllib2.HTTPError as h:
